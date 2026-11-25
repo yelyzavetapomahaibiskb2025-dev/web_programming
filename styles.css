@@ -1,0 +1,189 @@
+/* Явне керування блоковою моделлю */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Основний документ (Темна тема за замовчуванням) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0f19;
+    color: #cbd5e1;
+    line-height: 1.6;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Шапка резюме */
+header {
+    background: linear-gradient(135deg, #111827, #030712);
+    color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 1px solid #1f2937;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.15);
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    color: #ef4444;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+header a {
+    color: #f87171;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+header a:hover {
+    color: #ef4444;
+    text-decoration: underline;
+}
+
+/* Макет на основі Flexbox */
+.container {
+    display: flex;
+    gap: 25px;
+}
+
+/* Картки секцій */
+.card {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -3px rgba(239, 68, 68, 0.2);
+    border-color: #ef4444;
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    color: #f87171;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #1f2937;
+    letter-spacing: 0.5px;
+}
+
+.card p, .card li {
+    font-size: 1rem;
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+/* Інпути */
+input[data-role="developer"]:focus {
+    outline: none;
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
+}
+
+input[data-role="developer"] {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: #030712;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    color: #f3a2a2;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+/* Підвал */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    border-top: 1px solid #1f2937;
+}
+
+/* Медіазапит */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    body {
+        padding: 15px;
+    }
+
+    header {
+        padding: 25px 15px;
+        text-align: center;
+    }
+}
+
+/* ==========================================
+   ПРАВИЛА ДЛЯ СВІТЛОЇ ТЕМИ (Light Mode)
+   ========================================== */
+body.light-mode {
+    background-color: #71a8fa !important;
+    color: #fb3e3e !important;
+}
+
+/* Білий фон та прибрання темно-градієнтного тла у header */
+body.light-mode header,
+body.light-mode .card,
+body.light-mode footer,
+body.light-mode .container > div,
+body.light-mode section {
+    background: #99e7eb !important;
+    color: #1a1a1a !important;
+    border-color: #99bef2 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Кольори текстом і заголовками у світлій темі */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode strong {
+    color: #4068ec !important;
+}
+
+body.light-mode p,
+body.light-mode li,
+body.light-mode span {
+    color: #334155 !important;
+}
+
+body.light-mode a {
+    color: #ef4444 !important;
+}
+
+/* Кнопка перемикача теми */
+body.light-mode #theme-toggle-btn {
+    border-color: #ef4444 !important;
+    color: #ef4444 !important;
+    background-color: #fef2f2 !important;
+}

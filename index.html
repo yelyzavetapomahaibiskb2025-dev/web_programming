@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - Веброзробник</title>
+    
+    <!-- 1. Зовнішнє підключення стилів (External CSS) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 2. Внутрішнє підключення стилів (Internal CSS) -->
+    <style>
+        .internal-note {
+            background-color: #18181b;
+            border-left: 4px solid #ef4444;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: #fca5a5;
+            border-top: 1px solid #27272a;
+            border-right: 1px solid #27272a;
+            border-bottom: 1px solid #27272a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 3. Вбудоване підключення стилів (Inline CSS) -->
+    <header style="text-align: center; padding: 40px 30px;">
+        <h1 id="main-title">Єлизавета Помагайбіс</h1>
+        <p class="subtitle">Студентка спеціальності «Кібербезпека та захист інформації»</p>
+        <p>
+            Email: <a href="mailto:yelyzaveta.pomahaibis.kb.2025@lpnu.ua">yelyzaveta.pomahaibis.kb.2025@lpnu.ua</a> | 
+            GitHub: <a href="https://github.com/yelyzavetapomahaibiskb2025-dev" target="_blank">github.com/yelyzavetapomahaibiskb2025-dev</a>
+        </p>
+        <button id="theme-toggle-btn" style="padding: 8px 16px; border-radius: 6px; border: 1px solid #ff4d4d; background: transparent; color: inherit; cursor: pointer; font-weight: bold;">
+  🌗 Змінити тему
+</button>
+    </header>
+
+    <main class="container">
+        <!-- Ліва колонка / Основні блоки -->
+        <div style="flex: 2; display: flex; flex-direction: column; gap: 20px;">
+            
+            <!-- Секція: Про мене -->
+            <section class="card">
+                <h2>Про мене</h2>
+                <p>
+                    Я Помагайбіс Єлизавета, студентка 1-го курсу Національного університету „Львівська політехніка“ за спеціальністю "Кібербезпека та захист інформації".
+                    Цікавлюся вебтехнологіями, практикуюсь у написанні коду на Python та C#, а також вивчаю принципи захисту інформаційних систем.
+                    Шукаю можливості для практичного розвитку в ІТ, вивчаю базові технології створення сайтів та захистом даних, прагну розвивати навички.
+                </p>
+            </section>
+
+            <!-- Секція: Освіта -->
+            <section class="card">
+                <h2>Освіта</h2>
+                <p><strong>Університет:</strong> Національний університет «Львівська політехніка»</p>
+                <p><strong>Спеціальність:</strong> Кібербезпека та захист інформації</p>
+                <p><strong>Роки навчання:</strong> 2025 – дотепер</p>
+            </section>
+
+            <!-- Секція: Досвід / Навчальні проєкти -->
+            <section class="card">
+                <h2>Досвід та проєкти</h2>
+                <ul>
+                    <li><strong>Лабораторна робота №1:</strong> Створення та налаштування базової структури вебпроєкту.</li>
+                    <li><strong>Лабораторна робота №2:</strong> Розробка резюме за допомогою чистого HTML та React.</li>
+                    <li>
+                        <strong>Проєкт «UCD Ponic» (Автоматизована гідропоніка):</strong> 
+                        Розробка програмного забезпечення для мікроконтролера (C/C++) з метою автоматизації процесів.
+                    </li>
+                    <li>
+                        <strong>Проєкт «Інтерактивна ручка»:</strong> 
+                        Розробка апаратно-програмного пристрою на базі мікроконтролера для відстеження рухів пера. 
+                        Реалізація логіки збору даних з сенсорів та їх бездротової передачі на ПК.
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="card">
+  <h2>Відгуки роботодавців</h2>
+  <div id="reviews-container"></div>
+</section>
+
+        <!-- Права колонка / Навички та Мови -->
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
+            
+            <!-- Секція: Навички -->
+            <section class="card">
+                <h2>Навички</h2>
+                <ul>
+                    <li>Мови програмування: C#, Python, C++</li>
+                    <li>Мови розмітки та стилів: HTML5</li>
+                    <li>Інструменти: Git, GitHub, VS Code, Cisco Packet Tracer</li>
+                </ul>
+                <div style="margin-top: 15px;">
+                    <!-- Використання селектора атрибута та псевдокласу :focus -->
+                    <input type="text" data-role="developer" placeholder="Введіть текст для перевірки :focus">
+                </div>
+            </section>
+
+            <!-- Секція: Мови -->
+            <section class="card">
+                <h2>Володіння мовами</h2>
+                <ul>
+                    <li>Українська — рідна</li>
+                    <li>Англійська — середній рівень (B1)</li>
+                    <li>Італійська — допороговий рівень (A2)</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Підвал сторінки -->
+    <footer>
+        <footer>
+    <p>© 2026 Єлизавета Помагайбіс. Усі права захищені.</p>
+    <p id="footer-info"></p> <!-- Додайте цей елемент -->
+</footer>
+    </footer>
+    <!-- Модальне вікно з формою -->
+<div id="contact-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; align-items: center; justify-content: center;">
+  <div style="background: #1e1e2f; padding: 25px; border-radius: 12px; width: 90%; max-width: 450px; color: #fff; position: relative;">
+    <button id="close-modal-btn" style="position: absolute; top: 10px; right: 15px; background: none; border: none; color: #fff; font-size: 20px; cursor: pointer;">&times;</button>
+    <h2 style="margin-top: 0;">Зворотний зв'язок</h2>
+    
+    <form action="https://formspree.io/f/xyeeqrbn" method="POST" style="display: flex; flex-direction: column; gap: 12px;">
+      <input type="text" name="name" placeholder="Ім'я" required style="padding: 10px; border-radius: 6px; border: 1px solid #444; background: #2a2a3d; color: #fff;" />
+      <input type="email" name="email" placeholder="Email" required style="padding: 10px; border-radius: 6px; border: 1px solid #444; background: #2a2a3d; color: #fff;" />
+      <input type="tel" name="phone" placeholder="Номер телефону" required style="padding: 10px; border-radius: 6px; border: 1px solid #444; background: #2a2a3d; color: #fff;" />
+      <textarea name="message" placeholder="Повідомлення..." rows="4" required style="padding: 10px; border-radius: 6px; border: 1px solid #444; background: #2a2a3d; color: #fff;"></textarea>
+      <button type="submit" style="padding: 12px; border-radius: 6px; border: none; background: #ff4d4d; color: white; font-weight: bold; cursor: pointer;">Надіслати</button>
+    </form>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
