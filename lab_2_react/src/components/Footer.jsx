@@ -23,6 +23,7 @@ const Footer = () => {
   return (
     <footer style={{ textAlign: 'center', padding: '20px', borderTop: '1px solid #333', marginTop: '20px' }}>
       <p>© 2026 Єлизавета Помагайбіс. Усі права захищені.</p>
+      <p>Сайт розгорнуто на Vercel</p>
       <p style={{ fontSize: '0.85em', opacity: 0.8 }}>
         Платформа: {sysInfo.platform} | Браузер: {sysInfo.userAgent}
       </p>
